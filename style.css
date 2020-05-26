@@ -1,9 +1,18 @@
 body, html {
     height: 100%;
+    display: grid;
 }
 .backgroundImage {
     background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/cW5lDBG/videoblocks-abstract-programming-code-moves-in-the-camera-software-development-concept_s0fm20jshg_thumbnail-full01.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.questionBox {
+    width: 80%;
+    height: 70%;
+    border: 0 auto;
+    margin: auto;
+    background-color: rgb(174, 245, 247);
+    border-radius: 50px;
 }
