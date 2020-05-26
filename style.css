@@ -1,0 +1,9 @@
+body, html {
+    height: 100%;
+}
+.backgroundImage {
+    background-image: url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/cW5lDBG/videoblocks-abstract-programming-code-moves-in-the-camera-software-development-concept_s0fm20jshg_thumbnail-full01.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
