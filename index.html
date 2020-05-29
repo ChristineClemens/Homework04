@@ -14,15 +14,20 @@
         <div class="center, questionBox">
             <h1>JavaScript Quiz</h1>
             <hr />
-            <p id="question">Question</p>
-            <div class="row" style="text-align: center;">
-                <button id="btn1" type="button" class="button">Info</button>
-                <button id="btn2" type="button" class="button">Info</button>
+            <p id="question" class="question"></p>
+            <div class="row">
+                <div style="text-align: center;">
+                    <button id="btn1" type="button" class="button"></button><span id="option1"></span></button>
+                    <button id="btn2" type="button" class="button"></button><span id="option2"></span></button>
+                </div>
+                <div style="text-align: center;">
+                    <button id="btn3" type="button" class="button"></button><span id="option3"></span></button>
+                    <button id="btn4" type="button" class="button"></button><span id="option4"></span></button>
+                </div>
             </div>
-            <div class="row" style="text-align: center;">
-                <button id="btn3" type="button" class="button">Info</button>
-                <button id="btn4" type="button" class="button">Info</button>
-            </div>
+            <footer>
+                <p id="progress" class="progress">Question x of y.</p>
+            </footer>
         </div>
         <script type="type/javascript" src="script.js"></script>
     </body>
