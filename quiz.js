@@ -34,7 +34,7 @@ function updateTimer(){
     
     if( countdown<0 ){
         document.querySelector('#timer').innerHTML = 
-            `<img src='https://image.flaticon.com/icons/svg/100/100291.svg' width=64 /> Time up!`;
+            "<h2>Time's up!</h2>";
         clearInterval( timer );
     } else {
         document.querySelector('#timer').innerHTML = 

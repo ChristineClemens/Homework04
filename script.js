@@ -6,14 +6,13 @@
 
 
 //App---------------------------------------------------------
+
 function populate() {
     if(quiz.isEnded()) {
         showScores();
-    }
-    else {
+    } else {
         //start timer
         updateTimer();
-
 
         // show question
         var question = document.getElementById("question");
@@ -26,10 +25,15 @@ function populate() {
             element.innerHTML = choices[i];
             guess("btn" + i, choices[i]);
         }
-
         showProgress();
     }
 };
+
+function welcome() {
+    var welcome = "<h1>Start Quiz?</h1>";
+    welcome += "<button id='start'>Let's go!</button>";
+    document.getElementById("start").addEventListener("click", populate);
+}
 
 function guess(id, guess) {
     var button = document.getElementById(id);
