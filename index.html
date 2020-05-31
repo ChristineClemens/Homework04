@@ -10,10 +10,13 @@
         <title>Christine Clemens | JavaScript Quiz</title>
     </head>
 
-    <body class="container, backgroundImage">
+    <body onLoad="populate" class="container, backgroundImage">
         <div class="grid">
             <div id="quiz" class="questionBox">
                 <h1>JavaScript Quiz</h1>
+                <div class="container">
+                    <h2 id='timer' class="display-4"></h2>
+                </div>
                 <hr />
                 <p id="question" class="question"></p>
                 <div class="buttons" style ="text-align: center; margin: 30px;">
@@ -28,9 +31,6 @@
                 <hr style="margin-top: 50px" />
                 <footer>
                     <p id="progress" class="progress">Question x of y.</p>
-                    <div class="alert">
-                        This is an alert box.
-                      </div>
                 </footer>
             </div>
         </div>

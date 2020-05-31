@@ -11,9 +11,13 @@ function populate() {
         showScores();
     }
     else {
+        //start timer
+        updateTimer();
+
+
         // show question
-        var element = document.getElementById("question");
-        element.innerHTML = quiz.getQuestionIndex().text;
+        var question = document.getElementById("question");
+        question.innerHTML = quiz.getQuestionIndex().text;
 
         // show options
         var choices = quiz.getQuestionIndex().choices;
@@ -35,18 +39,17 @@ function guess(id, guess) {
     }
 };
 
-
 function showProgress() {
     var currentQuestionNumber = quiz.questionIndex + 1;
-    var element = document.getElementById("progress");
-    element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
+    var progressBar = document.getElementById("progress");
+    progressBar.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
 };
 
 function showScores() {
     var gameOverHTML = "<h1>Result</h1>";
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
-    var element = document.getElementById("quiz");
-    element.innerHTML = gameOverHTML;
+    var questionBox = document.getElementById("quiz");
+    questionBox.innerHTML = gameOverHTML;
 };
 
 // create questions
