@@ -10,10 +10,12 @@
 function populate() {
     if(quiz.isEnded()) {
         showScores();
+        saveEntry();
     } else {
+        
         //start timer
         updateTimer();
-
+        
         // show question
         var question = document.getElementById("question");
         question.innerHTML = quiz.getQuestionIndex().text;
@@ -29,11 +31,15 @@ function populate() {
     }
 };
 
-function welcome() {
-    var welcome = "<h1>Start Quiz?</h1>";
-    welcome += "<button id='start'>Let's go!</button>";
-    document.getElementById("start").addEventListener("click", populate);
-}
+// function welcome() {
+//     var welcome = "<h1>Start Quiz?</h1>";
+//     var startBtn = "<button onclick='populate'>Let's go!</button>";
+//     welcome += startBtn;
+//     startBtn = document.getElementById("quiz");
+//     document.querySelector(".button").addEventListener ("click", populate);
+//     startBtn.innerHTML = welcome;
+//     };
+//     welcome();
 
 function guess(id, guess) {
     var button = document.getElementById(id);
@@ -55,6 +61,21 @@ function showScores() {
     var questionBox = document.getElementById("quiz");
     questionBox.innerHTML = gameOverHTML;
 };
+
+function saveEntry() {
+    var txt="";
+    var name="";
+    name = prompt("To save your scores, please enter your name below:", "Ex. ABC...");
+        if (name == null || name == "") {
+            txt = "You have chosen not to save your scores.";
+            showScores();
+        } else {
+            localStorage.setItem(name, quiz.score);
+            document.getElementById("quiz").innerHTML = localStorage.getItem(name, quiz.score);
+            txt = "Your scores have been saved!";
+            showScores();
+        }    
+    }
 
 // create questions
 var questions = [
