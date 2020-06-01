@@ -19,3 +19,6 @@ Christine Clemens - Fourth Homework Submission for SCS Boot Coding Bootcamp
 * Create a reset button.
 
 *Unfortunately, although I did include code that was intended to perform the action of storing prompt input to local storage, I was not able to successfully execute the action. Likewise, I struggled with switching between "screens" and therefore, tended to rely on alert boxes which is not what I was hoping to do. 
+
+Repository Link: https://github.com/ChristineClemens/Homework04
+Deployed Web Application Link: https://christineclemens.github.io/Homework04/
